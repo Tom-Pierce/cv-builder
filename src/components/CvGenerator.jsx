@@ -35,22 +35,6 @@ export default function CvGenerator() {
     const newPersonalInfo = { ...personalInfo, [key]: e.target.value };
     setPersonalInfo(newPersonalInfo);
   }
-  function nameChange(e) {
-    const newPersonalInfo = { ...personalInfo, name: e.target.value };
-    setPersonalInfo(newPersonalInfo);
-  }
-  function addressChange(e) {
-    const newPersonalInfo = { ...personalInfo, address: e.target.value };
-    setPersonalInfo(newPersonalInfo);
-  }
-  function phoneNumChange(e) {
-    const newPersonalInfo = { ...personalInfo, phoneNum: e.target.value };
-    setPersonalInfo(newPersonalInfo);
-  }
-  function emailChange(e) {
-    const newPersonalInfo = { ...personalInfo, email: e.target.value };
-    setPersonalInfo(newPersonalInfo);
-  }
 
   //Education section functions
   function addEducation() {
@@ -70,7 +54,6 @@ export default function CvGenerator() {
     const newEducationList = educationList.filter((educationObj) => {
       return educationObj.id !== id;
     });
-    console.log("new eduacation list after removing ", newEducationList);
     setEducationList(newEducationList);
   }
 
@@ -97,6 +80,7 @@ export default function CvGenerator() {
         <EducationInputs
           educationList={educationList}
           editEducation={editEducation}
+          removeEducation={removeEducation}
         />
         <button className="add-education-btn" onClick={addEducation}>
           Add Education
