@@ -1,10 +1,4 @@
-export default function PersonalInfoInputs({
-  personalInfo,
-  nameChange,
-  addressChange,
-  phoneNumChange,
-  emailChange,
-}) {
+export default function PersonalInfoInputs({ personalInfo, editPersonalInfo }) {
   return (
     <section className="cv-inputs-section">
       <h2 className="personal-details-header">Personal Details</h2>
@@ -16,7 +10,9 @@ export default function PersonalInfoInputs({
           id="name-input"
           placeholder="Full Name"
           value={personalInfo.name}
-          onChange={nameChange}
+          onChange={(event) => {
+            editPersonalInfo(event, "name");
+          }}
         />
         <label htmlFor="address-input">Address</label>
         <input
@@ -25,7 +21,9 @@ export default function PersonalInfoInputs({
           id="address-input"
           placeholder="Address"
           value={personalInfo.address}
-          onChange={addressChange}
+          onChange={(event) => {
+            editPersonalInfo(event, "address");
+          }}
         />
         <label htmlFor="phone-number-input">Phone Number</label>
         <input
@@ -34,7 +32,9 @@ export default function PersonalInfoInputs({
           id="phone-number-input"
           placeholder="Phone No."
           value={personalInfo.phoneNum}
-          onChange={phoneNumChange}
+          onChange={(event) => {
+            editPersonalInfo(event, "phoneNum");
+          }}
         />
         <label htmlFor="email-input">Email</label>
         <input
@@ -43,7 +43,9 @@ export default function PersonalInfoInputs({
           id="email-input"
           placeholder="Email"
           value={personalInfo.email}
-          onChange={emailChange}
+          onChange={(event) => {
+            editPersonalInfo(event, "email");
+          }}
         />
       </form>
     </section>

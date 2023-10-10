@@ -31,6 +31,10 @@ export default function CvGenerator() {
     },
   ]);
 
+  function editPersonalInfo(e, key) {
+    const newPersonalInfo = { ...personalInfo, [key]: e.target.value };
+    setPersonalInfo(newPersonalInfo);
+  }
   function nameChange(e) {
     const newPersonalInfo = { ...personalInfo, name: e.target.value };
     setPersonalInfo(newPersonalInfo);
@@ -86,10 +90,7 @@ export default function CvGenerator() {
       <section className="cv-inputs-section">
         <PersonalInfoInputs
           personalInfo={personalInfo}
-          nameChange={nameChange}
-          addressChange={addressChange}
-          phoneNumChange={phoneNumChange}
-          emailChange={emailChange}
+          editPersonalInfo={editPersonalInfo}
         />
         <h2 className="education-inputs-header">Education</h2>
 
