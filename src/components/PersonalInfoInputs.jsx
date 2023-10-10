@@ -1,11 +1,8 @@
-export default function CvInputs({
-  name,
+export default function PersonalInfoInputs({
+  personalInfo,
   nameChange,
-  address,
   addressChange,
-  phoneNum,
   phoneNumChange,
-  email,
   emailChange,
 }) {
   return (
@@ -18,7 +15,7 @@ export default function CvInputs({
           className="name-input"
           id="name-input"
           placeholder="Full Name"
-          value={name}
+          value={personalInfo.name}
           onChange={nameChange}
         />
         <label htmlFor="address-input">Address</label>
@@ -27,7 +24,7 @@ export default function CvInputs({
           className="address-input"
           id="address-input"
           placeholder="Address"
-          value={address}
+          value={personalInfo.address}
           onChange={addressChange}
         />
         <label htmlFor="phone-number-input">Phone Number</label>
@@ -36,7 +33,7 @@ export default function CvInputs({
           className="phone-number-input"
           id="phone-number-input"
           placeholder="Phone No."
-          value={phoneNum}
+          value={personalInfo.phoneNum}
           onChange={phoneNumChange}
         />
         <label htmlFor="email-input">Email</label>
@@ -45,7 +42,7 @@ export default function CvInputs({
           className="email-input"
           id="email-input"
           placeholder="Email"
-          value={email}
+          value={personalInfo.email}
           onChange={emailChange}
         />
       </form>
