@@ -4,9 +4,6 @@ import CvPreview from "./CvPreview";
 import uniqid from "uniqid";
 import EducationInputs from "./EducationInputs";
 import WorkInputs from "./WorkInputs";
-import "../styles/Education.css";
-import "../styles/Work.css";
-import "../styles/PersonalInfo.css";
 
 export default function CvGenerator() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -42,7 +39,19 @@ export default function CvGenerator() {
       role: "Engineer",
       start: "2022",
       end: "Present",
-      location: "Dublin",
+      location: "Dublin, Ireland",
+      description:
+        "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android",
+    },
+    {
+      id: uniqid(),
+      name: "Blindr",
+      role: "CEO",
+      start: "2022",
+      end: "Present",
+      location: "Dublin, Ireland",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut perspiciatis voluptates, magni quod minus reprehenderit laboriosam at iure repudiandae corporis temporibus dolorum architecto aut consequatur ex beatae accusamus eligendi vel!",
     },
   ]);
 
@@ -92,6 +101,7 @@ export default function CvGenerator() {
       start: "",
       end: "",
       location: "",
+      description: "",
     };
     const newWorkList = [...workList, newWorkObj];
     setWorkList(newWorkList);
@@ -132,6 +142,8 @@ export default function CvGenerator() {
         <button className="add-education-btn" onClick={addEducation}>
           Add Education
         </button>
+        <h2 className="work-inputs-header">Work Experience</h2>
+
         <WorkInputs
           workList={workList}
           editWork={editWork}

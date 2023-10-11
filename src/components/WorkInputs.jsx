@@ -60,10 +60,22 @@ export default function WorkInputs({ workList, editWork, removeWork }) {
                 type="text"
                 className="work-end-date-input"
                 id={"work-end-date-input-" + workObj.id}
-                placeholder="Company Name"
+                placeholder="End"
                 value={workObj.end}
                 onChange={(event) => {
                   editWork(workObj.id, event, "end");
+                }}
+              />
+              <label htmlFor={"work-description-input-" + workObj.id}>
+                Description
+              </label>
+              <textarea
+                className="work-description-input"
+                id={"work-description-input-" + workObj.id}
+                placeholder="Description"
+                value={workObj.description}
+                onChange={(event) => {
+                  editWork(workObj.id, event, "description");
                 }}
               />
             </form>

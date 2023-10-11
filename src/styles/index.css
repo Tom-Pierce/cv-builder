@@ -2,23 +2,27 @@
 
 :root {
   --base-background: #fafaf9;
-  --header-color: #292524;
+  --header-color: #57534e;
+  --highlight-color: #e7e5e4;
+  --text-color: #1c1917;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--base-background);
-  color: #0c0a09;
+  color: var(--text-color);
+  font-size: 16px;
 }
 
 .content {
   display: flex;
+  padding: 1rem;
+  gap: 3rem;
 }
 
 .cv-inputs-section {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   gap: 2rem;
 }
 

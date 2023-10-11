@@ -3,6 +3,27 @@
   flex-direction: column;
 }
 
-.icon {
+.personal-details {
+  background-color: var(--header-color);
+  color: var(--base-background);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.full-name {
+  align-self: center;
+  font-size: 2rem;
+}
+
+.personal-details .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon img {
+  fill: white !important;
   display: inline;
 }

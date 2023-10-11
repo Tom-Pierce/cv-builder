@@ -1,14 +1,12 @@
 import "./styles/App.css";
-import Header from "./components/header";
+import "./styles/Education.css";
+import "./styles/Work.css";
+import "./styles/PersonalInfo.css";
+import "./styles/CvPreview.css";
 import CvGenerator from "./components/CvGenerator";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <CvGenerator />
-    </>
-  );
+  return <CvGenerator />;
 }
 
 export default App;

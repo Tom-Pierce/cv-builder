@@ -3,12 +3,33 @@
   flex-direction: column;
 }
 
-.education-details-section {
+.education-details {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem 4rem 0 4rem;
+}
+
+.education-details-header {
+  align-items: center;
+  background-color: var(--highlight-color);
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0.25rem;
 }
 
 .education-info {
   margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.education-info-group {
+  min-width: max-content;
+}
+
+.education-name,
+.education-start-end-dates {
+  font-weight: bold;
 }

@@ -3,12 +3,38 @@
   flex-direction: column;
 }
 
-.work-details-section {
+.work-details {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 2rem 4rem 0 4rem;
+}
+
+.work-details-header {
+  align-items: center;
+  background-color: var(--highlight-color);
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0.25rem;
 }
 
 .work-info {
   margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.work-info-group {
+  min-width: max-content;
+}
+
+.work-description {
+  margin-top: 8px;
+  width: 500px;
+}
+
+.work-name,
+.work-start-end-dates {
+  font-weight: 700;
 }
