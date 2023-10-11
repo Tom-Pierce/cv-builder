@@ -3,6 +3,7 @@ import PersonalInfoInputs from "./PersonalInfoInputs";
 import CvPreview from "./CvPreview";
 import uniqid from "uniqid";
 import EducationInputs from "./EducationInputs";
+import WorkInputs from "./WorkInputs";
 
 export default function CvGenerator() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -28,6 +29,17 @@ export default function CvGenerator() {
       start: "2019",
       end: "2025",
       location: "Dublin, Ireland",
+    },
+  ]);
+
+  const [workList, setWorkList] = useState([
+    {
+      id: uniqid(),
+      name: "Google",
+      role: "Engineer",
+      start: "2022",
+      end: "Present",
+      location: "Dublin",
     },
   ]);
 
@@ -68,6 +80,38 @@ export default function CvGenerator() {
     setEducationList(newEducationList);
   }
 
+  //Work section functions
+  function addWork() {
+    const newWorkObj = {
+      id: uniqid(),
+      name: "",
+      role: "",
+      start: "",
+      end: "",
+      location: "",
+    };
+    const newWorkList = [...workList, newWorkObj];
+    setWorkList(newWorkList);
+  }
+
+  function removeWork(id) {
+    const newWorkList = workList.filter((workObj) => {
+      return workObj.id !== id;
+    });
+    setWorkList(newWorkList);
+  }
+
+  function editWork(id, e, key) {
+    const newWorkList = workList.map((newWork) => {
+      if (newWork.id === id) {
+        // Update the value property of the target object
+        return { ...newWork, [key]: e.target.value };
+      }
+      return newWork;
+    });
+    setWorkList(newWorkList);
+  }
+
   return (
     <div className="content">
       <section className="cv-inputs-section">
@@ -85,10 +129,20 @@ export default function CvGenerator() {
         <button className="add-education-btn" onClick={addEducation}>
           Add Education
         </button>
+        <WorkInputs
+          workList={workList}
+          editWork={editWork}
+          removeWork={removeWork}
+        />
+        <button className="add-work-btn" onClick={addWork}>
+          Add Work Experience
+        </button>
       </section>
-      <CvPreview personalInfo={personalInfo} educationList={educationList} />
+      <CvPreview
+        personalInfo={personalInfo}
+        educationList={educationList}
+        workList={workList}
+      />
     </div>
   );
 }
-
-//TODO each education/work will be a seperate input and output, add button creates another form

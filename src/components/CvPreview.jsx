@@ -1,7 +1,7 @@
 import emailSVG from "../assets/email.svg";
 import locationSVG from "../assets/location-pin.svg";
 import phoneSVG from "../assets/phone.svg";
-export default function CvOutput({ personalInfo, educationList }) {
+export default function CvPreview({ personalInfo, educationList, workList }) {
   return (
     <div className="cv-preview-section">
       <section className="personal-details">
@@ -21,16 +21,32 @@ export default function CvOutput({ personalInfo, educationList }) {
         </p>
       </section>
       <section className="education-details">
-        <h2 className="educatio-details-header">Education</h2>
-        {educationList.map((education) => {
+        <h2 className="education-details-header">Education</h2>
+        {educationList.map((educationObj) => {
           return (
-            <div key={education.id} className="school-info">
+            <div key={educationObj.id} className="education-info">
               <p className="education-start-end-dates">
-                {education.start} {education.end && "-"} {education.end}
+                {educationObj.start} {educationObj.end && "-"}{" "}
+                {educationObj.end}
               </p>
-              <p className="school-name">{education.name}</p>
-              <p className="school-degree">{education.degree}</p>
-              <p className="school-location">{education.location}</p>
+              <p className="education-name">{educationObj.name}</p>
+              <p className="education-degree">{educationObj.degree}</p>
+              <p className="education-location">{educationObj.location}</p>
+            </div>
+          );
+        })}
+      </section>
+      <section className="work-details">
+        <h2 className="work-details-header">Work Experience</h2>
+        {workList.map((workObj) => {
+          return (
+            <div key={workObj.id} className="work-info">
+              <p className="work-start-end-dates">
+                {workObj.start} {workObj.end && "-"} {workObj.end}
+              </p>
+              <p className="work-name">{workObj.name}</p>
+              <p className="work-role">{workObj.role}</p>
+              <p className="work-location">{workObj.location}</p>
             </div>
           );
         })}
