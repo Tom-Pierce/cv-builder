@@ -82,9 +82,9 @@ export default function CvGenerator() {
   }
 
   function editEducation(id, e, key) {
+    // create a new education array with the correct education edited using the id and key that is passed through
     const newEducationList = educationList.map((newEducation) => {
       if (newEducation.id === id) {
-        // Update the value property of the target object
         return { ...newEducation, [key]: e.target.value };
       }
       return newEducation;
@@ -117,7 +117,7 @@ export default function CvGenerator() {
   function editWork(id, e, key) {
     const newWorkList = workList.map((newWork) => {
       if (newWork.id === id) {
-        // Update the value property of the target object
+        // create a new work array with the correct work edited using the id and key that is passed through
         return { ...newWork, [key]: e.target.value };
       }
       return newWork;
