@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --base-background: #fafaf9;
-  --header-color: #57534e;
-  --highlight-color: #e7e5e4;
-  --text-color: #1c1917;
+  --base-background: #f3f4f6;
+  --header-color: #4b5563;
+  --highlight-color: #f3f4f6;
+  --text-color: #030712;
 }
 
 body {
@@ -23,7 +23,8 @@ body {
 .cv-inputs-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  flex: auto;
 }
 
 .address,
@@ -31,4 +32,9 @@ body {
 .email {
   display: flex;
   align-items: center;
+}
+
+input,
+textarea {
+  background-color: var(--base-background);
 }

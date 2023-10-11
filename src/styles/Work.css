@@ -1,8 +1,4 @@
-.work-details-form {
-  display: flex;
-  flex-direction: column;
-}
-
+/* Styling for output */
 .work-details {
   display: flex;
   flex-direction: column;
@@ -20,7 +16,6 @@
 }
 
 .work-info {
-  margin-bottom: 1rem;
   display: flex;
   gap: 1rem;
 }
@@ -37,4 +32,46 @@
 .work-name,
 .work-start-end-dates {
   font-weight: 700;
+}
+
+/* Styling for inputs */
+
+.work-inputs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.work-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.work-details-form label {
+  margin-top: 0.5rem;
+}
+
+.remove-work-btn {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.work-details-form input,
+.work-details-form textarea {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.work-details-form textarea {
+  height: 8rem;
+}
+
+.add-work-btn {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
 }

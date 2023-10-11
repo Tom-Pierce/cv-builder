@@ -1,7 +1,4 @@
-.personal-details-form {
-  display: flex;
-  flex-direction: column;
-}
+/* Styling for output */
 
 .personal-details {
   background-color: var(--header-color);
@@ -26,4 +23,23 @@
 .icon img {
   fill: white !important;
   display: inline;
+}
+
+/* Styling for inputs */
+
+.personal-inputs-section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.personal-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.personal-details-form input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }

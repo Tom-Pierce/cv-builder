@@ -1,7 +1,4 @@
-.education-details-form {
-  display: flex;
-  flex-direction: column;
-}
+/* Styling for output */
 
 .education-details {
   display: flex;
@@ -20,7 +17,6 @@
 }
 
 .education-info {
-  margin-bottom: 1rem;
   display: flex;
   gap: 1rem;
 }
@@ -32,4 +28,40 @@
 .education-name,
 .education-start-end-dates {
   font-weight: bold;
+}
+
+/* Styling for inputs */
+.education-inputs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.education-details-form label {
+  margin-top: 0.5rem;
+}
+
+.remove-education-btn {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.education-details-form input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.add-education-btn {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
 }

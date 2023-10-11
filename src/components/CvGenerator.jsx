@@ -132,17 +132,16 @@ export default function CvGenerator() {
           personalInfo={personalInfo}
           editPersonalInfo={editPersonalInfo}
         />
-        <h2 className="education-inputs-header">Education</h2>
 
         <EducationInputs
           educationList={educationList}
           editEducation={editEducation}
           removeEducation={removeEducation}
+          addEducation={addEducation}
         />
         <button className="add-education-btn" onClick={addEducation}>
           Add Education
         </button>
-        <h2 className="work-inputs-header">Work Experience</h2>
 
         <WorkInputs
           workList={workList}

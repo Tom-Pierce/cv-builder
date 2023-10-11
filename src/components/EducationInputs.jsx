@@ -5,19 +5,20 @@ export default function EducationInputs({
 }) {
   return (
     <>
-      <ul className="education-details-section">
+      <h2 className="education-inputs-header">Education</h2>
+      <ul className="education-inputs-section">
         {educationList.map((educationObj) => {
           return (
             <li key={educationObj.id}>
               <form action="" method="POST" className="education-details-form">
-                <label htmlFor={"school-name-input-" + educationObj.id}>
-                  School Name
+                <label htmlFor={"education-name-input-" + educationObj.id}>
+                  School
                 </label>
                 <input
                   type="text"
-                  className="school-name-input"
-                  id={"school-name-input-" + educationObj.id}
-                  placeholder="School Name"
+                  className="education-name-input"
+                  id={"education-name-input-" + educationObj.id}
+                  placeholder="education Name"
                   value={educationObj.name}
                   onChange={(event) => {
                     editEducation(educationObj.id, event, "name");
@@ -62,29 +63,29 @@ export default function EducationInputs({
                     editEducation(educationObj.id, event, "end");
                   }}
                 />
-                <label htmlFor={"school-location-input-" + educationObj.id}>
+                <label htmlFor={"education-location-input-" + educationObj.id}>
                   Location
                 </label>
                 <input
                   type="text"
-                  className="school-location-input"
-                  id={"school-location-input-" + educationObj.id}
+                  className="education-location-input"
+                  id={"education-location-input-" + educationObj.id}
                   placeholder="Location"
                   value={educationObj.location}
                   onChange={(event) => {
                     editEducation(educationObj.id, event, "location");
                   }}
                 />
+                <button
+                  type="button"
+                  className="remove-education-btn"
+                  onClick={() => {
+                    removeEducation(educationObj.id);
+                  }}
+                >
+                  Delete
+                </button>
               </form>
-              <button
-                type="button"
-                className="remove-education-btn"
-                onClick={() => {
-                  removeEducation(educationObj.id);
-                }}
-              >
-                Delete
-              </button>
             </li>
           );
         })}
