@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--header-color);
+}
+
+.header h1 {
+  color: var(--base-background);
+  font-weight: 200;
+  font-size: 4em;
+}

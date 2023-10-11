@@ -4,6 +4,9 @@ import CvPreview from "./CvPreview";
 import uniqid from "uniqid";
 import EducationInputs from "./EducationInputs";
 import WorkInputs from "./WorkInputs";
+import "../styles/Education.css";
+import "../styles/Work.css";
+import "../styles/PersonalInfo.css";
 
 export default function CvGenerator() {
   const [personalInfo, setPersonalInfo] = useState({

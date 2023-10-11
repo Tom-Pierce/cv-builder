@@ -1,0 +1,14 @@
+.work-details-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.work-info {
+  margin-bottom: 1rem;
+}
